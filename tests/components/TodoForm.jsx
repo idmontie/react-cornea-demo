@@ -43,6 +43,7 @@ describe('Todo Form', () => {
       componentName: 'todo-form',
       onSnapshotCreated: done,
       savePath: __dirname + '/',
+      cssFile: __dirname + '/../../styles/app.css',
     });
 
     differ.compare().then((areTheSame) => {

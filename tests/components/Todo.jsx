@@ -40,6 +40,7 @@ describe('Todo', () => {
       componentName: 'todo',
       onSnapshotCreated: done,
       savePath: __dirname + '/',
+      cssFile: __dirname + '/../../styles/app.css',
     });
 
     differ.compare().then((areTheSame) => {

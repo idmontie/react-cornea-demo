@@ -22,11 +22,12 @@ class Todo extends React.Component {
     const { todo } = this.props;
 
     return (
-      <div className="todo">
+      <div className={`todo ${todo.isCompleted ? 'todo--completed' : ''}`}>
         <input
+          className="todo__toggle"
           type="checkbox"
           onClick={this.handleClick}
-          selected={todo.isCompleted}
+          checked={todo.isCompleted}
         />
 
         <span className="todo__text">
