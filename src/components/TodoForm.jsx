@@ -8,7 +8,7 @@ class TodoForm extends React.Component {
   }
 
   handleSubmit = (event) => {
-    event.preventDefault();
+    event ? event.preventDefault() : null;
 
     this.props.handleCreate({
       title: this.refs.title.value,
